@@ -41,6 +41,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0'
   gem 'factory_bot_rails', '~> 5.1'
   gem 'faker', '~> 2.11'
+  gem 'cypress-on-rails', '~> 1.6'
+  gem 'database_cleaner-active_record', '~> 1.8'
 end
 
 group :development do
