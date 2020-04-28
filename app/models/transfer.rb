@@ -20,14 +20,16 @@ class Transfer < ApplicationRecord
   end
 
   before_save do
-    ActiveRecord::Base.transaction do
-      account_from.balance -= amount
-      account_to.balance += amount
-      account_from.save!
-      account_to.save!
-    rescue StandardError
-      errors.add(:base, 'Could not transfer money. Please check input data and try one more time')
-      throw(:abort)
+    if new_record?
+      ActiveRecord::Base.transaction do
+        account_from.balance -= amount
+        account_to.balance += amount
+        account_from.save!
+        account_to.save!
+      rescue StandardError
+        errors.add(:base, 'Could not transfer money. Please check input data and try one more time')
+        throw(:abort)
+      end
     end
   end
 end
