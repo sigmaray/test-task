@@ -44,7 +44,6 @@ yarn cypress open --project ./spec
 
 # What was not done
 
-* API specs (it doesn't make sense to implement them since I added Cypress E2E tests)
 * Separate pages (https://reacttraining.com/react-router/web/guides/quick-start). I know how to implement them but didn't want to spend time.
 * Client-side validation using YUP (https://medium.com/fotontech/react-native-formik-yup-%EF%B8%8F-18465e020ea0). I'm familiar with YUP, but didn't want to use it in such simple test task
 * From UX perspective It would be better not to prevent Enter keypress (I do it to avoid double submit). Didn't want to spend time
