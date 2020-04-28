@@ -7,9 +7,18 @@ services:
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
-    volumes:
-      - .:/myapp
+    # volumes:
+    #   - .:/app
     ports:
       - "3000:3000"
+    depends_on:
+      - db
+  web-test:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -e test -p 5017 -b '0.0.0.0'"
+    # volumes:
+    #   - .:/app
+    ports:
+      - "5017:5017"
     depends_on:
       - db
