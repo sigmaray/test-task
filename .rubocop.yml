@@ -13,8 +13,11 @@ AllCops:
     - bin/**/*
     - db/schema.rb
     - node_modules/**/*
+    - spec/cypress/**/*
+    - config/initializers/money.rb
 Style/StringLiterals:
   Exclude:
+    - config/spring.rb
     - config/application.rb
     - config/puma.rb
     - config/environments/production.rb
@@ -40,3 +43,16 @@ Style/CommentedKeyword:
 Style/BlockComments:
   Exclude:
     - spec/spec_helper.rb
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
+Lint/AmbiguousOperator:
+  Exclude:
+    - app/admin/*
+Style/SymbolArray:
+  Exclude:
+    - ./**/*
+Style/ClassAndModuleChildren:
+  Exclude:
+    - app/controllers/api/*
