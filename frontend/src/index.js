@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import store from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
+import { fetchAccounts } from './features/accounts/accountsSlice';
+import { fetchTransfers } from './features/transfers/transfersSlice';
+
+store.dispatch(fetchAccounts());
+store.dispatch(fetchTransfers());
 
 ReactDOM.render(
   <React.StrictMode>

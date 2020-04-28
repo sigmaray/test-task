@@ -17,4 +17,4 @@
 
 // console.log('Hello World from Webpacker')
 
-import '../../../frontend/hello_react';
+import '../../../frontend/src';
