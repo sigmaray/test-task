@@ -4,12 +4,9 @@ import Form from '../../lib/FormNoEnter';
 import { fetchAccounts } from './accountsSlice';
 import { get } from 'lodash';
 
-// import store from './app/store';
 import store from '../../app/store';
 import axiosCSRF from '../../lib/axiosCSRF';
 import noty from '../../lib/noty';
-
-// const dispatch = useDispatch();
 
 const NewAccountForm = () => {
   const handleSubmit = (values) => {
