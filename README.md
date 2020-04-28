@@ -1,24 +1,57 @@
-# README
+# Hot to launch application using RVM
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+vim config/database.yml # edit DB credentials
+rvm install ruby-2.7.1
+bundle install
+rake db:migrate
+./bin/webpack-dev-server 
+rails server
+```
+# Linting
 
-Things you may want to cover:
+## Rubocop
+```
+rubocop
+```
+## ESLint
+```
+yarn run eslint .
+```
 
-* Ruby version
+# Hot to launch application with Docker
+```
+./setup.sh
+./start.sh
+```
 
-* System dependencies
+# How to launch Cypress UI
+```
+yarn cypress open --project ./spec
+```
 
-* Configuration
+# How to run tests with Docker
+## RSpec:
+```
+./test-rspec.sh
+```
 
-* Database creation
+## Cypress
+```
+./start.sh
+./test-cypress.sh
+```
 
-* Database initialization
+# What was not done
 
-* How to run the test suite
+* Separate pages (https://reacttraining.com/react-router/web/guides/quick-start). I know how to implement them but didn't want to spend time.
+* Client-side validation using YUP (https://medium.com/fotontech/react-native-formik-yup-%EF%B8%8F-18465e020ea0). I'm familiar with YUP, but didn't want to use it in such simple test task
+* From UX perspective It would be better not to prevent Enter keypress (I do it to avoid double submit). Didn't want to spend time
+* Better UI (Bootrstrap, Semantic UI, Material Design). It's bad to use <br /> for spacing, but I didn't want to bother with CSS. Using <center> tag is also bad, this tag is deprecated.
 
-* Services (job queues, cache servers, search engines, etc.)
+# Notes
 
-* Deployment instructions
-
-* ...
+* This is first time I'm using Docker. I'm not sure I used it in the best way possible 
+* This is first time I'm using Redux Toolkit. In the past I used oldschool Redux, redux-toolkit is new thing to me
+* I don't like rspec best practices (http://www.betterspecs.org/). I write tests in a straight forward way without using overcomplicated DSLs (http://www.rubyinside.com/dhh-offended-by-rspec-debate-4610.html)
+* I know about shoulda-matchers (https://makandracards.com/makandra/38645-testing-activerecord-validations-with-rspec). I don't like them
