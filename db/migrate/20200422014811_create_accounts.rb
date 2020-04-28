@@ -1,4 +1,4 @@
-class CreateAccounts < ActiveRecord::Migration[6.0]
+class CreateAccounts < ActiveRecord::Migration[5.2]
   def change
     create_table :accounts do |t|
       t.string :person_name
