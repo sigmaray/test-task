@@ -56,3 +56,16 @@ yarn cypress open --project ./spec
 * This is first time I'm using Redux Toolkit. In the past I used oldschool Redux, redux-toolkit is new thing to me
 * I don't like rspec best practices (http://www.betterspecs.org/). I write tests in a straight forward way without using overcomplicated DSLs (http://www.rubyinside.com/dhh-offended-by-rspec-debate-4610.html)
 * I know about shoulda-matchers (https://makandracards.com/makandra/38645-testing-activerecord-validations-with-rspec). I don't like them
+
+# Functional Requirements
+```
+фронт на реакте
+бэк на руби
+2 страницы на реакте
+баланс аккаунта посмотреть на 1 странице
+на 2 странице перевести деньги с одного на другой аккаунт
+никакой баланс не должен уйти в минус
+юнит тесты
+тесты на апи
+на логику тесты
+```
